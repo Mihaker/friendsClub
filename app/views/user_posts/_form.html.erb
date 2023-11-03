@@ -1,0 +1,13 @@
+<%= form_with model: [ @user, @user.user_post.build ] do |form|%>
+
+  <div class='row'>
+    <div class="col-9">
+      <%= form.text_field :body, class: 'form-control', placeholder: 'What are you have new?' %>
+    </div>
+
+    <div class='col-3'>
+      <%= form.submit class: 'btn btn-primary' %>
+    </div>
+  </div>
+
+<% end %>

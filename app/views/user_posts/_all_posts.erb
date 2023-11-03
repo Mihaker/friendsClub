@@ -1,0 +1,24 @@
+<% @user.user_post.each do |item| %>
+  <% if item.body.present? %>
+    <div class='row pt-2'>
+        <div class='pt-4'>
+          <div class='card'>
+            <div class='card-header'>
+              <div class='row'>
+                <div class='col-10'>
+                  <%= item.user.full_name%>
+                </div>
+                <div class='col-2'>
+                  <%= item.created_at.strftime("%Y %b %d")%>
+                </div>
+              </div>
+            </div>
+            <div class='card-text p-3'>
+              <%= item.body %>
+            </div>
+          </div>
+        </div>
+    </div>
+  <% end %>  
+<% end %>
+ 

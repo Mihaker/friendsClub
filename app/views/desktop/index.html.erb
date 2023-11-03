@@ -1,0 +1,13 @@
+<div class='container'>
+ <%= link_to "Create new user", new_user_path%>
+  <h1 class='text-center'>Find the Friend</h1>
+  <hr>
+  <% @users.each do |user| %>
+      <h3> 
+        <%= user.first_name %> 
+        <%= user.last_name %> 
+      </h3>
+       <p> <%= link_to 'View Profile', user_path(user)%></p>
+    <hr>
+  <% end %>
+</div>
